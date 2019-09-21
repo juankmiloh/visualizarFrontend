@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab One
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="text-align: justify;">
+      <span *ngIf="errorMessage != ''" style="color: red;">
+        ERROR -> {{errorMessage}}
+      </span>
+  </div>
+  <ion-card *ngFor="let item of people" class="welcome-card">
+    <ion-card-header>
+      <ion-card-title>Welcome {{item.nombre}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <span>EDAD : {{item.edad}}</span> <br>
+      <span>GÉNERO : {{item.genero}}</span> <br>
+      <span>E-MAIL : {{item.email}}</span> <br>
+      <span>LOCALIDAD : {{item.localidad}}</span> <br>
+      <span>TELEFONO : {{item.telefono}}</span>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
